@@ -1,0 +1,11 @@
+.Detail {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    width: 600px;
+    z-index: 1000;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    padding: 20px;
+}
