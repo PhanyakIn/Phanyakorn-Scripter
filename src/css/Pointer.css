@@ -1,0 +1,48 @@
+.pointer-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    mix-blend-mode: difference;
+    transition: opacity 180ms ease;
+}
+
+.pointer-layer--visible {
+    opacity: 1;
+}
+
+.Pointer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    pointer-events: none;
+    background: #fff;
+    z-index: 2;
+    transition:
+        width 300ms cubic-bezier(0.76, 0, 0.24, 1),
+        height 300ms cubic-bezier(0.76, 0, 0.24, 1),
+        border-radius 300ms cubic-bezier(0.76, 0, 0.24, 1);
+    will-change: transform;
+}
+
+.pointer-layer--hover .Pointer {
+    width: 80px;
+    height: 80px;
+}
+
+@media (pointer: coarse) {
+    .pointer-layer {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pointer-layer,
+    .Pointer {
+        transition-duration: 0.01ms;
+    }
+}

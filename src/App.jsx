@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Pointer from './Pointer';
 import Navbar from './Navbar';
 import Catalog from './Catalog';
 import News from './News';
@@ -16,6 +17,7 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Pointer/>
     </div>
   );
 }
